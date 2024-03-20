@@ -23,5 +23,9 @@ jobs:
         database: postgres
         port: 5432
       id: postgres
-
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - run: npm i
     - run: node test.mjs
